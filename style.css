@@ -1,0 +1,286 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  color: white;
+  /* overflow-x: hidden; */
+}
+@keyframes gradual-unblur {
+  from {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: rgb(0, 0, 0, 0.4);
+  }
+  to {
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+    background-color: transparent;
+  }
+}
+
+@keyframes gradual-blur {
+  from {
+  }
+  to {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: rgb(0, 0, 0, 0.4);
+  }
+}
+.navbar-toggler {
+  color: white;
+}
+.blur-navbar {
+  animation-name: gradual-blur;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.unblur-navbar {
+  animation-name: gradual-unblur;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.nav-link,
+.navbar-brand {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
+}
+
+.nav-link {
+  margin-left: 1em !important;
+  font-size: 120%;
+}
+.navbar-brand:hover {
+  color: white;
+}
+
+.nav-link:hover {
+  background-color: black;
+  color: white;
+  /* animation-name: hover-fade;
+  /* background-color: white; */
+  /* animation-duration: 0.6s;
+  animation-fill-mode: forwards; */
+  transition: background-color 600ms ease;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.header {
+  background-image: url("./images/kaleidoscope.jpg");
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: -1;
+}
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+.overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.home {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+.home p {
+  font-size: 170%;
+}
+h2 {
+  font-size: 230%;
+}
+.about {
+  color: black;
+}
+.about {
+  background-color: white;
+}
+.about-image {
+}
+
+.card {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: rgb(0, 0, 0, 0.4);
+  border: 1px white solid;
+}
+.image-container {
+  position: relative;
+}
+.hidden {
+  opacity: 0;
+}
+label {
+  color: gray;
+}
+.projects {
+  margin: 4em auto;
+  padding: 1em;
+  position: relative;
+}
+.projects img {
+  position: inherit;
+  object-fit: cover;
+}
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.projects .row div {
+  transition: opacity 400ms ease, size 400ms ease;
+}
+.projects .row:hover > div .card {
+  opacity: 0.3;
+}
+.projects .row:hover > div .card:hover {
+  opacity: 1;
+}
+
+#content-input {
+  height: 10em;
+}
+.form-control {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: rgb(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+}
+
+.socials:hover i,
+form:focus-within .form-control {
+  opacity: 0.5;
+  transition: opacity 500ms ease;
+}
+
+.socials i:hover {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+form .form-control:focus {
+  opacity: 1;
+  background-color: rgb(0, 0, 0, 0.4);
+  box-shadow: none;
+  color: white;
+  transition: opacity 1000ms ease;
+}
+#submit::before,
+#submit::after,
+#submit-span::before,
+#submit-span::after,
+.form-floating::before,
+.form-floating::after,
+.form-control::before,
+.form-control::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  transition: 1s;
+}
+#submit {
+  color: white;
+  background: rgb(0, 0, 0, 0.4);
+  padding: 7px;
+  border: none;
+  transition: background-color 600ms ease, color 600ms ease;
+}
+
+#submit::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+#submit::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+#submit-span::before,
+.form-floating::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+#submit-span::after,
+.form-floating::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+#submit:hover::before,
+#submit:hover::after,
+#submit:hover #submit-span::before,
+#submit:hover #submit-span::after {
+  width: 54%;
+  border-color: black;
+}
+
+.form-floating:focus-within::before,
+.form-floating:focus-within::after,
+.form-floating:focus-within .form-control::before,
+.form-floating:focus-within .form-control::after {
+  width: 54%;
+  border-color: white;
+}
+#submit:hover {
+  background-color: white;
+  color: black;
+}
+#submit:hover::before,
+#submit:hover::after,
+#submit:hover span::before,
+#submit:hover span::after {
+  height: 55%;
+  border-color: black;
+  color: black;
+}
+
+.social {
+  font-size: calc(100px + 5vw);
+  color: white;
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#submit {
+  position: relative;
+  float: right;
+}
+
+.modal-content {
+  opacity: 1 !important;
+}
+
+.modal button {
+  background: none;
+  border: 1px white solid;
+  border: none;
+  color: white;
+}

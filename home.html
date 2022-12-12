@@ -1,77 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Byron Esson Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/d89818d609.js"
       crossorigin="anonymous"
     ></script>
+    <title>Byron's Portfolio</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header id="bar">
-        <div class="nav">
-          <nav>
-            <ul>
-              <li>
-                <a id="name" href="./home.html"
-                  ><b>B Y R O N &nbsp;&nbsp;E S S O N</b></a
-                >
-              </li>
-              <li class="content"><a href="./home.html">Home</a></li>
-              <li class="content"><a href="">Projects</a></li>
-              <li class="content"><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
+    <nav class="navbar navbar-expand-md fixed-top pe-md-5">
+      <a id="name" class="navbar-brand ps-3 ps-md-5" href="./home.html"
+        ><b>B Y R O N &nbsp;&nbsp;E S S O N</b></a
+      >
+      <button
+        class="navbar-toggler navbar-dark"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target=".navbar-collapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
         </div>
-      </header>
-      <div id="photo">
-        <img src="./jamnobg.png" alt="this is not me" width="100%" />
       </div>
-      <div class="mainbox">
-        <p class="main">
-          Open to opportunities designing solutions to creative problems.
-        </p>
+    </nav> -->
+    <header class="page-header header container-fluid min-vh-100">
+      <div class="overlay">
+        <section class="home col-12">
+          <h1>Hello, my name is Byron.</h1>
+          <p class="offset-lg-4 col-lg-4">Full-stack developer.</p>
+        </section>
       </div>
-      <div class="subbox">
-        <p class="sub">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit rem
-          repudiandae cum voluptate magni iusto non omnis quia illum aliquam
-          repellat, voluptatem debitis assumenda. Quas rem voluptatum delectus
-          veritatis veniam impedit quod. Molestiae, eligendi alias
-          necessitatibus omnis, nemo error, inventore perferendis in aliquid sed
-          accusantium iusto minima dolor molestias doloribus.
-        </p>
+    </header>
+    <section class="about pt-3 pt-md-5 min-vh-100" id="about">
+      <div class="offset-lg-2 pt-md-5">
+        <h2 class="ms-2 my-5 pt-md-5 mt-md-5 ms-md-5 ms-lg-0">About Me</h2>
       </div>
-      <footer id="bottom-bar">
-        <div class="navbot">
-          <nav>
-            <ul>
-              <li>
+      <div class="container offset-lg-2">
+        <div class="row pb-5">
+          <img
+            src="./images/park.jpg"
+            class="about-image col-lg-4 px-2 px-md-0 pb-4 img-fluid h-25"
+            alt="Byron Esson"
+          />
+          <main class="about-info col-lg-7 ps-2 ps-md-0 ms-lg-5">
+            <ul class="fs-4">
+              <label class="fs-6">Name</label>
+              <li class="lh-1">Byron Esson</li>
+              <label class="fs-6">Age</label>
+              <li class="lh-1">22</li>
+              <label class="fs-6">Location</label>
+              <li class="lh-1">Wolverhampton</li>
+              <!-- <li>Occupation: Full-stack Developer</li> -->
+            </ul>
+            <p class="fs-5">
+              I'm an aspiring software developer looking for opportunities to
+              put the skills I've learned into practice. I pride myself in my
+              ability to solve problems and critically analyse my own work, to
+              ensure my code is as clean and effective as it can be.
+            </p>
+            <p class="fs-5">
+              That I have developed a keen interest in the inner workings of
+              computers comes as no surprise to me, since I have always been an
+              avid PC gamer. I appreciate the beauty of maths and music and
+              strive to use the creativity and logical thinking inherent in
+              those skillsets to create appealing and functional software.
+            </p>
+            <!-- As a PC gamer from a young age, I have always -->
+            <!-- had a keen interest in the inner workings of computers and their -->
+            <!-- programmes. As a mathematics fanatic, I appreciate the value of -->
+            <!-- approaching problems logi -->
+          </main>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+    <section
+      class="container projects min-vh-100 pt-5 d-flex align-items-center"
+      id="projects"
+    >
+      <div>
+        <h2 class="my-lg-5">Projects</h2>
+        <div class="row gy-4 gx-4 h-75">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div
+              class="card h-100 p-4"
+              data-bs-toggle="modal"
+              data-bs-target="#santa-modal"
+            >
+              <!-- <a
+            target="_blank"
+            href="https://northcoders.com/projects/nov-2022/santas-little-helper"
+            class="text-reset text-decoration-none"
+            > -->
+              <img src="images/SANTA's.png" class="h-100 mw-100" />
+              <!-- <h3 class="project-title">Santa's Little Helper</h3> -->
+              <!-- <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              interdum quam odio, quis placerat ante luctus eu. Sed aliquet
+              dolor id sapien rutrum, id vulputate quam iaculis.
+            </p> -->
+              <!-- </a> -->
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="santa-modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content card">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">
+                    Santa's Little Helper
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A group project completed during my time at Northcoders. A
+                    present suggesting application that utilises a machine
+                    learning algorithm to gradually improve suggestions to the
+                    user
+                  </p>
+                  <label>Tech-stack</label>
+                  <p>React Native, Express.js, Node.js, Flask</p>
+                  <label class="d-block">Links</label>
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://northcoders.com/projects/nov-2022/santas-little-helper"
+                    >Northcoders Site</a
+                  >
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://github.com/robcarter123/react-final-project"
+                    >Frontend</a
+                  >
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://github.com/2202Hannah/final-project-be-ebay"
+                    >Express API</a
+                  >
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://github.com/teyahbd/ecommerce-keyword-api"
+                    >Machine Learning API</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12"
+            data-bs-target="#fe-modal"
+            data-bs-toggle="modal"
+          >
+            <!-- <a
+            target="_blank"
+            href="https://github.com/byronEsson/fe-nc-games-project"
+            class="text-reset text-decoration-none"
+            > -->
+            <div class="card h-100 p-4">
+              <img
+                src="images/React-icon.png"
+                class="mx-auto d-block mb-4 h-100 mw-100"
+              />
+              <!-- <h3 class="project-title">NC-Games</h3> -->
+              <!-- <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                interdum quam odio, quis placerat ante luctus eu. Sed aliquet
+                dolor id sapien rutrum, id vulputate quam iaculis.
+              </p> -->
+            </div>
+            <!-- </a> -->
+          </div>
+          <div
+            class="modal fade"
+            id="fe-modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content card">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">
+                    NC Games Frontend
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A solo project completed during my time at Northcoders.
+                    Simple CRUD web application to post, read and comment on
+                    game reviews.
+                  </p>
+                  <label>Tech-stack</label>
+                  <p>React, Node.js</p>
+                  <label class="d-block">Links</label>
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://byrons-nc-games.netlify.app/"
+                    >Site</a
+                  >
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://github.com/byronEsson/fe-nc-games-project"
+                    >Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 offset-md-3 offset-lg-0">
+            <div
+              class="card h-100 p-4"
+              data-bs-target="#be-modal"
+              data-bs-toggle="modal"
+            >
+              <!-- <a
+            target="_blank"
+            href="https://github.com/byronEsson/be-nc-games-project"
+            class="text-reset text-decoration-none"
+            > -->
+              <img
+                src="images/expressjs.svg"
+                class="mx-auto d-block mb-4 h-100 mw-100"
+              />
+              <!-- </a> -->
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="be-modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content card">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">
+                    NC Games Backend
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A solo project completed during my time at Northcoders.
+                    Fully-tested REST API to interact with a SQL database.
+                  </p>
+                  <label>Tech-stack</label>
+                  <p>Express.js, Node.js, PostgreSQL, node-postgres</p>
+                  <label class="d-block">Links</label>
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://byrons-backend-project.herokuapp.com/api"
+                    >API</a
+                  >
+                  <a
+                    class="text-decoration-none"
+                    target="_blank"
+                    href="https://github.com/byronEsson/be-nc-games-project"
+                    >Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="contact container min-vh-100 pt-5 d-flex align-items-center"
+      id="contact"
+    >
+      <div>
+        <h2 class="mb-lg-5">Get in touch</h2>
+        <div class="row">
+          <div class="col-lg-6 col-xs-12">
+            <p class="">
+              I'm open to opportunities that will allow me grow as a developer.
+              As such I'm looking for an environment where learning is
+              encouraged. If you have an opening, challenging project idea,
+              advice, questions or any other request, please don't hesitate to
+              complete this form and get in touch.
+            </p>
+            <form
+              class="needs-validation"
+              action="https://formspree.io/f/xrgdnlll"
+              method="POST"
+              novalidate
+            >
+              <div class="row w-100 ms-0 me-0">
+                <div
+                  class="col-xs-12 form-floating mb-2 ps-0 pe-0 me-2 col-lg-6"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name-input"
+                    name="name"
+                    placeholder="Hello"
+                    required
+                  />
+                  <label class="ps-4" for="name-input">Name</label>
+                </div>
+                <div class="col form-floating mb-2 ps-0 pe-0 me-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email-input"
+                    name="email"
+                    placeholder="email"
+                    required
+                  />
+                  <label class="ps-4" for="email-input">Email</label>
+                </div>
+              </div>
+              <div class="form-floating mb-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject-input"
+                  name="_subject"
+                  placeholder="subject"
+                  required
+                />
+                <label for="subject-input">Subject</label>
+              </div>
+              <div class="form-floating mb-2">
+                <textarea
+                  class="form-control"
+                  id="content-input"
+                  placeholder="content"
+                  name="message"
+                  required
+                ></textarea>
+                <label for="content-input">Message</label>
+              </div>
+              <input class="hidden" name="_gotcha" />
+              <button id="submit" class="float-end submit" value="Send">
+                <span id="submit-span"></span>Get in touch!
+              </button>
+            </form>
+          </div>
+          <div class="col-lg-6 col-xs-12 social-container">
+            <!-- <h3 class="my-5">My links</h3> -->
+            <div class="socials row my-5">
+              <div class="col-4">
                 <a
                   href="https://www.linkedin.com/in/byron-esson-4181121a7/"
                   target="_blank"
-                  ><i class="fa-brands fa-linkedin"></i
+                  ><i class="fa-brands fa-linkedin social"></i
                 ></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/byronline_" target="_blank"
-                  ><i class="fa-brands fa-square-twitter"></i
+              </div>
+              <div class="col-4">
+                <a href="mailto:byronesson767@gmail.com"
+                  ><i class="fa-solid fa-square-envelope social"></i
                 ></a>
-              </li>
-              <li>
+              </div>
+              <div class="col-4">
                 <a href="https://github.com/byronEsson" target="_blank"
-                  ><i class="fa-brands fa-square-github"></i
+                  ><i class="fa-brands fa-square-github social"></i
                 ></a>
-              </li>
-            </ul>
-          </nav>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </section>
+
+    <footer id="bottom-bar">
+      <div class="navbot">
+        <nav></nav>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
